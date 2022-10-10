@@ -21,6 +21,8 @@ from core import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('calendar/',views.lista_eventos),
+    path('calendar/evento/',views.evento),
+    path('calendar/evento/submit',views.submit_evento),
     path('',RedirectView.as_view(url='/calendar/')),
     path('login/',views.login_user),
     path('login/submit',views.submit_login),

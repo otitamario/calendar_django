@@ -50,4 +50,8 @@ def submit_evento(request):
         usuario=usuario)
     return redirect('/')
 
+@login_required(login_url='/login/')
+def delete_evento(request,id_evento):
+    Evento.objects.filter(id=id_evento).delete()
+    return redirect('/')
 

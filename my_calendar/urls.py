@@ -21,6 +21,7 @@ from core import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('calendar/',views.lista_eventos),
+    path('calendar/lista/',views.json_lista_evento),
     path('calendar/evento/',views.evento),
     path('calendar/evento/submit',views.submit_evento),
     path('calendar/evento/delete/<int:id_evento>/',views.delete_evento),
